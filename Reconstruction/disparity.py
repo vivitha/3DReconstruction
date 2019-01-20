@@ -76,7 +76,7 @@ img_1 = cv2.imread(img_path1)
 img_2 = cv2.imread(img_path2)
 
 #Get height and width. Note: It assumes that both pictures are the same size. They HAVE to be same size and height. 
-h,w = img_2.shape
+h,w = img_2.shape[:2]
 
 #Get optimal camera matrix for better undistortion 
 new_camera_matrix, roi = cv2.getOptimalNewCameraMatrix(K,dist,(w,h),1,(w,h))
