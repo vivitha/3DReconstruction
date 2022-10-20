@@ -42,7 +42,7 @@ objp[:,:2] = np.mgrid[0:chessboard_size[0], 0:chessboard_size[1]].T.reshape(-1,2
 
 #read images
 
-calibration_paths = glob.glob('./calibration_images/*')
+calibration_paths = glob.glob('../video2frames/left/*')
 
 #Iterate over images to find intrinsic matrix
 for image_path in tqdm(calibration_paths):
